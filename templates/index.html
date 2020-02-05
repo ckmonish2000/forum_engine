@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Quora Clone
+{% endblock title %}
+
+{% block body %}
+posts
+
+<a href="/questions">questions</a>
+
+{% for i in value %}
+<div style="border:2px solid black;width:250px;">
+<a href="/pst/{{i[0]}}"><h3>{{i[1]}}</h3></a>
+</div>
+{% endfor %}
+{% endblock body %}
+

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+post ur question
+{% endblock title %}
+
+{% block body %}
+<form action="/post" method="POST">
+<input type="text" placeholder="author" name="name">
+<textarea name="question" id="quest" cols="30" rows="10" placeholder="enter ur question...."></textarea>
+<input type="submit" value="submit">
+</form>
+{% endblock body %}
+

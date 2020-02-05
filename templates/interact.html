@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% for i in value  %}
+<h1>{{i[1]}}</h1>
+<br>
+
+
+<ul>
+{% for i in value2 %}
+<li><h5>{{i[1]}}</h5></li>
+{% endfor %}
+</ul>
+
+<div>
+<form action="/comment/{{i[0]}}" method="POST">
+<input type="text" placeholder="comment" name="comm">
+<input type="submit" value="comment">
+</form>
+</div>
+{% endfor %}
+{% endblock body %}
